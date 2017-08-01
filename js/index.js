@@ -326,7 +326,8 @@ function optimizer(){
       else if ([0,2,6,8].includes(playerPositions[0])){
         var edges = [1,3,7,5];
         for (var i=0;i<edges.length;i++){
-          if (availableSpots.includes(edges[i])){return edges[i];}
+          var randEdgeSpot = edges[Math.floor(Math.random() * edges.length)];
+          if (availableSpots.includes(randEdgeSpot)){return randEdgeSpot;}
         }
       }
       //if none of the above check if first player move was an edge
